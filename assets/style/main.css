@@ -18,7 +18,6 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
     font-family: "Poppins", serif;
     font-size: 1rem;
     color: var(--cor-texto);
@@ -26,6 +25,14 @@ body{
     height: 100%;
     background-color: var(--cor-de-fundo);
     cursor: default;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .card{

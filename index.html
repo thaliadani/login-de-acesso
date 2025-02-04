@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -10,27 +10,27 @@
 </head>
 
 <body>
-    <main class="card">
+    <main>
 
-        <h1>Login</h1>
-        <form class="formulario-login" action="">
-            <label for="nome">Nome</label>
-            <input type="text" maxlength="5" required name="nome" id="nome" placeholder="Digite o nome">
-            <label for="senha">Senha</label>
-            <input type="password" maxlength="4" required name="senha" id="senha" placeholder="Digite a senha">
-            <button id="btn-enviar" type="submit">Enviar</button>
-        </form>
-
-
+        <section class="card">
+            <h1>Login</h1>
+            <form class="formulario-login" action="">
+                <label for="nome">Nome</label>
+                <input type="text" maxlength="5" required name="nome" id="nome" placeholder="Digite o nome">
+                <label for="senha">Senha</label>
+                <input type="password" maxlength="4" required name="senha" id="senha" placeholder="Digite a senha">
+                <button id="btn-enviar" type="submit">Enviar</button>
+            </form>
+        </section>
+        
+        <section class="card">
+            <h2>Atenção</h2>
+            <p>O nome precisa conter apenas 5 dígitos com apenas números ímpares.</p>
+            <p>A senha precisa ser de apenas 4 dígitos com números pares.</p>
+        </section>
     </main>
 
     <script src="./assets/src/script.js"></script>
-
-    <section class="card">
-        <h2>Atenção</h2>
-        <p>O nome precisa conter apenas 5 dígitos com apenas números ímpares.</p>
-        <p>A senha precisa ser de apenas 4 dígitos com números pares.</p>
-    </section>
 </body>
 
 </html>
