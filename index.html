@@ -1,53 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="./assets/icons/login.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="./assets/style/main.css" />
-    <title>Login</title>
-  </head>
 
-  <body>
-    <main>
-      <section class="card">
-        <h1>Login</h1>
-        <form class="formulario-login" action="">
-          <label for="nome">Nome</label>
-          <input
-            type="text"
-            maxlength="5"
-            required
-            name="nome"
-            id="nome"
-            placeholder="Digite o nome"
-          />
-          <label for="senha">Senha</label>
-          <input
-            type="password"
-            maxlength="4"
-            required
-            name="senha"
-            id="senha"
-            placeholder="Digite a senha"
-          />
-          <button id="btn-enviar" type="submit" onclick="enviarFormulario()">Enviar</button>
-        </form>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./assets/icons/login.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./assets/style/main.css" />
+  <title>Login</title>
+</head>
 
-      <section class="card">
-        <h2>Atenção</h2>
-        <p>
-          O nome precisa conter apenas 5 dígitos com apenas números ímpares.
-        </p>
-        <p>A senha precisa ser de apenas 4 dígitos com números pares.</p>
-      </section>
-    </main>
+<body>
+  <main>
+    <section class="card">
+      <h1>Login</h1>
+      <form class="formulario-login">
+        <label for="usuario">Usuário</label>
+        <!-- Digitar ate 5 numeros -->
+        <input type="text" oninput="apenasNumeros(event)" maxlength="5" required name="usuario" id="usuario"
+          placeholder="Digite o Usuário" />
 
-    <script src="./assets/src/script.js"></script>
-  </body>
+        <label for="senha">Senha</label>
+        <input type="password" oninput="apenasNumeros(event)" maxlength="4" required name="senha" id="senha"
+          placeholder="Digite a senha" />
+
+        <button id="btn-enviar" type="submit" onclick="validarLogin()">Enviar</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Atenção</h2>
+      <p>
+        O usuário precisa conter apenas 5 dígitos com apenas números ímpares.
+      </p>
+      <p>A senha precisa ser de apenas 4 dígitos com números pares.</p>
+    </section>
+  </main>
+
+  <script src="./assets/src/script.js"></script>
+</body>
+
 </html>

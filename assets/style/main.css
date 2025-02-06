@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-:root{
+:root {
     --cor-de-fundo: #e6e6e6;
     --cor-de-fundo-card: linear-gradient(135deg, rgb(46, 98, 146) 0%, rgb(28, 103, 133) 28%, rgb(123, 182, 207) 100%);
     --cor-de-fundo-botao: #2e2e2e;
+    
     --cor-texto: #fff;
+    --cor-texto-atencao: #c70000;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,7 +29,7 @@ body{
     cursor: default;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,7 +37,7 @@ main{
     gap: 2rem;
 }
 
-.card{
+main .card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,17 +49,18 @@ main{
     margin-top: 1rem;
     width: 80%;
     border-radius: .4rem 2rem;
-    -webkit-box-shadow: 9px 10px 11px 0px rgba(0,0,0,0.47);
-    -moz-box-shadow: 9px 10px 11px 0px rgba(0,0,0,0.47);
-    box-shadow: 9px 10px 11px 0px rgba(0,0,0,0.47);
+    -webkit-box-shadow: 9px 10px 11px 0px rgba(0, 0, 0, 0.47);
+    -moz-box-shadow: 9px 10px 11px 0px rgba(0, 0, 0, 0.47);
+    box-shadow: 9px 10px 11px 0px rgba(0, 0, 0, 0.47);
 }
 
-.card h1:hover, .card h2:hover{
+main .card h1:hover,
+main .card h2:hover {
     font-style: italic;
-    transition: .2s;
+    transition: .1s;
 }
 
-.formulario-login{
+main .card .formulario-login {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,7 +68,8 @@ main{
     gap: .5rem;
 }
 
-.formulario-login #nome, .formulario-login #senha{
+main .card .formulario-login #usuario,
+main .card .formulario-login #senha {
     border: none;
     border-radius: .4rem;
     padding: .5rem;
@@ -75,22 +79,34 @@ main{
     background-size: 30px;
     outline-color: #ffffff;
     outline-offset: .2rem;
-    &::placeholder{
+
+    &::placeholder {
         color: #414141;
         font-family: "Poppins", serif;
         font-size: .8rem;
     }
 }
 
-.formulario-login #nome{
+main .card .formulario-login #usuario {
     background-image: url('../icons/nome.png');
 }
 
-.formulario-login #senha{
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+main .card .formulario-login #senha {
     background-image: url('../icons/senha.png');
 }
 
-.formulario-login #btn-enviar{
+main .card .formulario-login #btn-enviar {
     border: none;
     border-radius: .4rem;
     padding: .5rem;
@@ -104,14 +120,15 @@ main{
     transition: transform .1s;
 }
 
-.formulario-login #btn-enviar:hover{
+main .card .formulario-login #btn-enviar:hover {
     transform: scale(1.1);
 }
 
-.formulario-login #btn-enviar:active{
+main .card .formulario-login #btn-enviar:active {
     background-color: #000;
     transform: scale(1);
 }
 
-
-
+main .card h2{
+    color: var(--cor-texto-atencao);
+}
