@@ -124,6 +124,11 @@ main .card .formulario-login #senha:hover{
   cursor: pointer;
 }
 
+main .card .formulario-login #usuario:active,
+main .card .formulario-login #senha:active{
+  cursor: text;
+}
+
 main .card .formulario-login #btn-enviar {
   border: none;
   border-radius: 0.4rem;
