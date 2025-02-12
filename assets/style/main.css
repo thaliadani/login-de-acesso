@@ -85,12 +85,6 @@ main .card {
   box-shadow: 9px 10px 11px 0px rgba(0, 0, 0, 0.47);
 }
 
-main .card h1:hover,
-main .card h2:hover {
-  font-style: italic;
-  transition: 0.1s;
-}
-
 main .card .formulario-login {
   display: flex;
   flex-direction: column;
@@ -120,17 +114,6 @@ main .card .formulario-login #senha {
 
 main .card .formulario-login #usuario {
   background-image: url("../icons/usuario.png");
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
 }
 
 main .card .formulario-login #senha {
