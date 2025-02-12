@@ -107,7 +107,8 @@ main .card .formulario-login #senha {
   &::placeholder {
     color: #414141;
     font-family: "Poppins", serif;
-    font-size: 0.8rem;
+    font-size: 0.8rem; 
+    cursor: text;
   }
 }
 
@@ -122,11 +123,6 @@ main .card .formulario-login #senha {
 main .card .formulario-login #usuario:hover,
 main .card .formulario-login #senha:hover{
   cursor: pointer;
-}
-
-main .card .formulario-login #usuario:active,
-main .card .formulario-login #senha:active{
-  cursor: text;
 }
 
 main .card .formulario-login #btn-enviar {
