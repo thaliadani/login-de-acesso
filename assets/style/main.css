@@ -101,14 +101,10 @@ main .card .formulario-login #senha {
   background-repeat: no-repeat;
   padding-left: 2rem;
   background-size: 30px;
-  outline-color: #ffffff;
-  outline-offset: 0.2rem;
-
   &::placeholder {
     color: #414141;
     font-family: "Poppins", serif;
-    font-size: 0.8rem; 
-    cursor: text;
+    font-size: 0.8rem;
   }
 }
 
@@ -121,8 +117,15 @@ main .card .formulario-login #senha {
 }
 
 main .card .formulario-login #usuario:hover,
-main .card .formulario-login #senha:hover{
+main .card .formulario-login #senha:hover {
   cursor: pointer;
+}
+
+main .card .formulario-login #usuario:focus,
+main .card .formulario-login #senha:focus {
+  outline-offset: 0.1rem;
+  outline: #fff solid 0.2rem;
+  cursor: text;
 }
 
 main .card .formulario-login #btn-enviar {
