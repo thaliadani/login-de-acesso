@@ -77,7 +77,7 @@ main .card {
   gap: 1rem;
   background: var(--cor-de-fundo-card);
   padding: 1rem;
-  width: 50%;
+  width: 70%;
   border-radius: 0.4rem 2rem;
   -webkit-box-shadow: 9px 10px 11px 0px rgba(0, 0, 0, 0.47);
   -moz-box-shadow: 9px 10px 11px 0px rgba(0, 0, 0, 0.47);
@@ -103,7 +103,6 @@ main .card .formulario-login #senha {
   background-size: 30px;
   outline-color: #ffffff;
   outline-offset: 0.2rem;
-  cursor:pointer;
 
   &::placeholder {
     color: #414141;
@@ -118,6 +117,11 @@ main .card .formulario-login #usuario {
 
 main .card .formulario-login #senha {
   background-image: url("../icons/cadeado.png");
+}
+
+main .card .formulario-login #usuario:hover,
+main .card .formulario-login #senha:hover{
+  cursor: pointer;
 }
 
 main .card .formulario-login #btn-enviar {
