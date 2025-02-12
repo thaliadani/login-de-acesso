@@ -103,6 +103,7 @@ main .card .formulario-login #senha {
   background-size: 30px;
   outline-color: #ffffff;
   outline-offset: 0.2rem;
+  cursor:pointer;
 
   &::placeholder {
     color: #414141;
