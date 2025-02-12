@@ -1,134 +1,165 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --cor-de-fundo: #e6e6e6;
-    --cor-de-fundo-card: linear-gradient(135deg, rgb(46, 98, 146) 0%, rgb(28, 103, 133) 28%, rgb(123, 182, 207) 100%);
-    --cor-de-fundo-botao: #2e2e2e;
-    
-    --cor-texto: #fff;
-    --cor-texto-atencao: #c70000;
+  --cor-de-fundo: #dadada;
+  --cor-de-fundo-card: linear-gradient(
+    135deg,
+    rgb(46, 98, 146) 0%,
+    rgb(28, 103, 133) 28%,
+    rgb(123, 182, 207) 100%
+  );
+  --cor-de-fundo-botao: #1a1a1a;
+
+  --cor-texto: #fff;
+  --cor-texto-atencao: #c70000;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: "Poppins", serif;
-    font-size: 1rem;
-    color: var(--cor-texto);
-    width: 100vw;
-    height: 100%;
-    background-color: var(--cor-de-fundo);
-    cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", serif;
+  font-size: 1rem;
+  color: var(--cor-texto);
+  width: 100vw;
+  height: 100%;
+  cursor: default;
+  animation: pulsar 18s infinite;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes pulsar {
+  0% {
+    background-color: #ffffff;
+  }
+
+  25% {
+    background-color: #6d6c6c;
+  }
+
+  50% {
+    background-color: #141414;
+  }
+
+  100% {
+    background-color: #ffffff;
+  }
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  animation: fade-in 0.25s ease-in;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
 }
 
 main .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 1rem;
-    background: var(--cor-de-fundo-card);
-    padding: 1rem;
-    margin-top: 1rem;
-    width: 80%;
-    border-radius: .4rem 2rem;
-    -webkit-box-shadow: 9px 10px 11px 0px rgba(0, 0, 0, 0.47);
-    -moz-box-shadow: 9px 10px 11px 0px rgba(0, 0, 0, 0.47);
-    box-shadow: 9px 10px 11px 0px rgba(0, 0, 0, 0.47);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  background: var(--cor-de-fundo-card);
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 80%;
+  border-radius: 0.4rem 2rem;
+  -webkit-box-shadow: 9px 10px 11px 0px rgba(0, 0, 0, 0.47);
+  -moz-box-shadow: 9px 10px 11px 0px rgba(0, 0, 0, 0.47);
+  box-shadow: 9px 10px 11px 0px rgba(0, 0, 0, 0.47);
 }
 
 main .card h1:hover,
 main .card h2:hover {
-    font-style: italic;
-    transition: .1s;
+  font-style: italic;
+  transition: 0.1s;
 }
 
 main .card .formulario-login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 main .card .formulario-login #usuario,
 main .card .formulario-login #senha {
-    border: none;
-    border-radius: .4rem;
-    padding: .5rem;
-    width: 100%;
-    background-repeat: no-repeat;
-    padding-left: 2rem;
-    background-size: 30px;
-    outline-color: #ffffff;
-    outline-offset: .2rem;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  padding-left: 2rem;
+  background-size: 30px;
+  outline-color: #ffffff;
+  outline-offset: 0.2rem;
 
-    &::placeholder {
-        color: #414141;
-        font-family: "Poppins", serif;
-        font-size: .8rem;
-    }
+  &::placeholder {
+    color: #414141;
+    font-family: "Poppins", serif;
+    font-size: 0.8rem;
+  }
 }
 
 main .card .formulario-login #usuario {
-    background-image: url('../icons/nome.png');
+  background-image: url("../icons/usuario.png");
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* Firefox */
-input[type=number] {
-    -moz-appearance: textfield;
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 main .card .formulario-login #senha {
-    background-image: url('../icons/senha.png');
+  background-image: url("../icons/cadeado.png");
 }
 
 main .card .formulario-login #btn-enviar {
-    border: none;
-    border-radius: .4rem;
-    padding: .5rem;
-    background-color: var(--cor-de-fundo-botao);
-    font-family: "Poppins", serif;
-    font-weight: 600;
-    margin-top: 1rem;
-    cursor: pointer;
-    width: 50%;
-    color: var(--cor-texto);
-    transition: transform .1s;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+  background-color: var(--cor-de-fundo-botao);
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+  width: 50%;
+  color: var(--cor-texto);
+  transition: transform 0.1s;
 }
 
 main .card .formulario-login #btn-enviar:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 main .card .formulario-login #btn-enviar:active {
-    background-color: #000;
-    transform: scale(1);
+  background-color: #000;
+  transform: scale(1);
 }
 
-main .card h2{
-    color: var(--cor-texto-atencao);
+main .card h2 {
+  color: var(--cor-texto-atencao);
 }
